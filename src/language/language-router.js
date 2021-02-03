@@ -63,7 +63,7 @@ languageRouter.get("/head", async (req, res, next) => {
 
 languageRouter.post("/guess", parser, async (req, res, next) => {
   const guess = req.body.guess.toLowerCase().trim();
-  // console.log('this is the guess', guess)
+  console.log('this is the guess', req.body)
 
   if (!guess) {
     res.status(400).json({ error: `Missing 'guess' in request body` });
